@@ -26,6 +26,7 @@ int main()
     {
     case 1:
         clockIn(&employee);
+        cout << "work hour: " << calcWorkedHour(&employee);
         break;
     }
 
