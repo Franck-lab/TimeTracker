@@ -7,9 +7,16 @@ using namespace std;
 void clockIn(Employee *e) {
 
 	const time_t rawtime = time(NULL);
-	e->table.rawtime = static_cast<int>(rawtime);
+	e->table.rawtimeIn = static_cast<int>(rawtime);
 	parseTime(ctime(&rawtime), e->table.timeIn);
 	cout << "Punch In Successful " << e->table.timeIn << endl;
+}
+
+void clockOut(Employee* e) {
+	const time_t rawtime = time(NULL);
+	e->table.rawtimeOut = static_cast<int>(rawtime);
+	parseTime(ctime(&rawtime), e->table.timeOut);
+	cout << "Punch Out Successful " << e->table.timeOut << endl;
 }
 
 void parseTime(char strTime[], char timeIn[]) {
@@ -21,5 +28,5 @@ void parseTime(char strTime[], char timeIn[]) {
 }
 
 double calcWorkedHour(Employee* e) {
-	return (static_cast<int>(time(NULL)) - e->table.rawtime) / 3600.0;
+	return (static_cast<int>(time(NULL)) - e->table.rawtimeIn) / 3600.0;
 }

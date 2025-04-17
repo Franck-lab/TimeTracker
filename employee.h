@@ -3,7 +3,8 @@
 
 struct TimeTable {
 	int shift[7];
-	int rawtime;
+	int rawtimeIn;
+	int rawtimeOut;
 	char timeIn[20];
 	char timeOut[20];
 };
@@ -17,6 +18,7 @@ struct Employee {
 };
 
 void clockIn(Employee*);
+void clockOut(Employee*);
 void parseTime(char*, char*);
 double calcWorkedHour(Employee*);
 
