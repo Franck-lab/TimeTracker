@@ -1,10 +1,12 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
+#include "timetable.h"
+
 struct Employee {
 	int ID;
 	char fullName[256];
-	double workedHour;
+	TimeTable table;
 	bool punch;
 	double timeOffBalance;
 };
