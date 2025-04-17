@@ -7,8 +7,8 @@ using namespace std;
 void clockIn(Employee *e) {
 
 	const time_t rawtime = time(NULL);
-	parseTime(ctime(&rawtime), e->table.TimeIn);
-	cout << "Punch In Successful " << e->table.TimeIn << endl;
+	parseTime(ctime(&rawtime), e->table.timeIn);
+	cout << "Punch In Successful " << e->table.timeIn << endl;
 }
 
 void parseTime(char strTime[], char timeIn[]) {

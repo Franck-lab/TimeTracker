@@ -18,9 +18,6 @@
     <ClCompile Include="TimeTracker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="timetable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="disputil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,9 +30,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="timetable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="disputil.h">

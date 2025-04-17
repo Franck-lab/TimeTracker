@@ -1,7 +1,11 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
-#include "timetable.h"
+struct TimeTable {
+	int shift[7];
+	char timeIn[20];
+	char timeOut[20];
+};
 
 struct Employee {
 	int ID;

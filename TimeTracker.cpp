@@ -27,8 +27,6 @@ int main()
     case 1:
         clockIn(&employee);
         break;
-    default:
-        break;
     }
 
     return 0;
