@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="disputil.cpp" />
     <ClCompile Include="timetable.cpp" />
     <ClCompile Include="TimeTracker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="employee.h" />
+    <ClInclude Include="disputil.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="timetable.h" />
   </ItemGroup>
