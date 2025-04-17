@@ -3,12 +3,14 @@
 // Author:
 
 #include <iostream>
+#include "employee.h"
 #include "disputil.h"
 
 using namespace std;
 
 int main()
 {
+    Employee employee;
     char name[20];
     int ID;
     int choice;
@@ -19,6 +21,15 @@ int main()
     
     cout << "Enter your choice (1-6): ";
     cin >> choice;
+
+    switch(choice)
+    {
+    case 1:
+        clockIn(&employee);
+        break;
+    default:
+        break;
+    }
 
     return 0;
 }

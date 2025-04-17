@@ -11,4 +11,7 @@ struct Employee {
 	double timeOffBalance;
 };
 
+void clockIn(Employee*);
+void parseTime(char*, char*);
+
 #endif

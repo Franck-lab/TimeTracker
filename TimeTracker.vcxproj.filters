@@ -24,6 +24,9 @@
     <ClCompile Include="disputil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="employee.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="employee.h">
