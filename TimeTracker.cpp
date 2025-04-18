@@ -30,6 +30,9 @@ int main()
     case 2:
         clockOut(&employee);
         break;
+    case 5:
+        takeTimeOff(&employee, getDaysOff(employee));
+        break;
     }
 
     return 0;

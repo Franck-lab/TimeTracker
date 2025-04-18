@@ -1,5 +1,6 @@
 #include <iostream>
 #include "disputil.h"
+#include "employee.h"
 
 using namespace std;
 
@@ -26,4 +27,22 @@ void displayMenu(char name[]) {
     cout << "4. Open Shift\n";
     cout << "5. Take Time Off\n";
     cout << "6. Exit\n\n";
+}
+
+int getDaysOff(const Employee e) {
+    int days;
+    while (true) {
+        cout << "\nHow many days are you taking? ";
+        cin >> days;
+        if (days < 0)
+            cout << "Days must be greater than or equal to zero. Try again.\n";
+        else if (e.timeOffBalance < days * 8.0) {
+            cout << "The number of days exceeds your time off balance, " << e.timeOffBalance << " hours.\n";
+            days = 0;
+            break;
+        }
+        else
+            break;
+    }
+    return days;
 }

@@ -27,6 +27,29 @@ void parseTime(char strTime[], char timeIn[]) {
 	strcpy(timeIn, strT);
 }
 
+void parseDate(char Date[], int parsedDate[]) {
+	parsedDate[0] = atoi(strtok(Date, "/"));
+	for(int count = 1; count < 3; count++)
+		parsedDate[count] = atoi(strtok(NULL, "/"));
+}
+
 double calcWorkedHour(Employee* e) {
 	return (static_cast<int>(time(NULL)) - e->table.rawtimeIn) / 3600.0;
+}
+
+Shift* selectDayOff(Employee *e, int days) {
+	Shift* daysOff = NULL;
+	if (days == 0)
+		return NULL;
+	for (int count = 0; count < 7; count++) {
+		if (e->table.shift[count] != OFF) {
+			cout << 
+		}
+	}
+}
+
+void takeTimeOff(Employee* e, int days) {
+	
+	while(count <)
+	for()
 }

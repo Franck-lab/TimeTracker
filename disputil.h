@@ -4,6 +4,7 @@
 void displayBanner();
 void displayLogin(char[], int, int&);
 void displayMenu(char[]);
+int getDaysOff(const Employee);
 
 #endif // !DISPUTIL_H
 
