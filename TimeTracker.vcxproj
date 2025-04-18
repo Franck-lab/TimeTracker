@@ -131,11 +131,13 @@
     <ClCompile Include="disputil.cpp" />
     <ClCompile Include="employee.cpp" />
     <ClCompile Include="TimeTracker.cpp" />
+    <ClCompile Include="timeutil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="employee.h" />
     <ClInclude Include="disputil.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="timeutil.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="EmployeeDB.txt" />

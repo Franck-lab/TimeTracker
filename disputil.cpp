@@ -1,5 +1,4 @@
 #include <iostream>
-//#include <string>
 #include "disputil.h"
 #include "employee.h"
 
@@ -52,7 +51,7 @@ int getDaysOff(const Employee e) {
 Shift selectDayOff(Employee* e, int& index) {
     char reply = 'n';
 
-    for (int count = 0; count < 7; count++) {
+    for (int count = index+1; count < 7; count++) {
         if (e->table.shift[count] != OFF) {
             cout << "\t";
             dayToStr(e->table.shift[count]);
