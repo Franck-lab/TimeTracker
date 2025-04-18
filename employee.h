@@ -1,10 +1,11 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
-enum Shift{MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY, ON, OFF};
+enum Shift{MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY, ON, OFF}; // Move this to a separate file
+// Remove ON, always specify the day
 
-struct TimeTable {
-	int shift[7];
+struct TimeTable { // Move this to a separate file
+	Shift shift[7] = {MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, OFF, OFF}; // Testing pursposes
 	int rawtimeIn;
 	int rawtimeOut;
 	char timeIn[20];
@@ -21,8 +22,8 @@ struct Employee {
 
 void clockIn(Employee*);
 void clockOut(Employee*);
-void parseTime(char*, char*);
-void parseDate(char[], int[]);
+void parseTime(char[], char[]); // Move this to a separate file
+void parseDate(char[], int[]); // Move this to a separate file
 double calcWorkedHour(Employee*);
 void takeTimeOff(Employee*, int);
 

@@ -1,4 +1,5 @@
 #include <iostream>
+//#include <string>
 #include "disputil.h"
 #include "employee.h"
 
@@ -34,10 +35,11 @@ int getDaysOff(const Employee e) {
     while (true) {
         cout << "\nHow many days are you taking? ";
         cin >> days;
+        cin.ignore();
         if (days < 0)
             cout << "Days must be greater than or equal to zero. Try again.\n";
         else if (e.timeOffBalance < days * 8.0) {
-            cout << "The number of days exceeds your time off balance, " << e.timeOffBalance << " hours.\n";
+            cout << "The number of days requested exceeds your time off balance, " << e.timeOffBalance << " hours.\n";
             days = 0;
             break;
         }
@@ -45,4 +47,47 @@ int getDaysOff(const Employee e) {
             break;
     }
     return days;
+}
+
+Shift selectDayOff(Employee* e, int& index) {
+    char reply = 'n';
+
+    for (int count = 0; count < 7; count++) {
+        if (e->table.shift[count] != OFF) {
+            cout << "\t";
+            dayToStr(e->table.shift[count]);
+            cin >> reply;
+        }
+        if (reply == 'y'){
+            index = count;
+            return OFF;
+        }
+    }
+    return ON;
+}
+
+void dayToStr(Shift day) {
+    switch (day) {
+    case MONDAY:
+        cout << "Monday: ";
+        break;
+    case TUESDAY:
+         cout << "Tuesday: ";
+         break;
+    case WEDNESDAY:
+         cout << "Wednesday: ";
+         break;
+    case THURSDAY:
+         cout << "Thursday: ";
+         break;
+    case FRIDAY:
+         cout << "Friday: ";         
+         break;
+    case SATURDAY:
+        cout << "Saturday: ";
+        break;
+    case SUNDAY:
+        cout << "Sunday: ";
+        break;
+    }
 }
