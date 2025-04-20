@@ -12,28 +12,32 @@ int main()
 {
     Employee employee;
     char name[20];
-    int ID;
+    char ID[5];
     int choice;
     displayBanner();
-    displayLogin(name, 20, ID);
-    // Login fixture, verification or authorization
-    displayMenu(name);
+
+    do {
+        displayLogin(name, 20, ID, 5);
+        loginEmployee(&employee, name, ID);
+    } while (!employee.logon);
     
-    cout << "Enter your choice (1-6): ";
-    cin >> choice;
+        displayMenu(name);
+    
+        cout << "Enter your choice (1-6): ";
+        cin >> choice;
 
-    switch(choice)
-    {
-    case 1:
-        clockIn(&employee);
-        break;
-    case 2:
-        clockOut(&employee);
-        break;
-    case 5:
-        takeTimeOff(&employee, getDaysOff(employee));
-        break;
-    }
-
+        switch(choice)
+        {
+         case 1:
+            clockIn(&employee);
+            break;
+        case 2:
+            clockOut(&employee);
+            break;
+        case 5:
+            takeTimeOff(&employee, getDaysOff(employee));
+            break;
+        }
+   
     return 0;
 }

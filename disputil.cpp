@@ -11,11 +11,11 @@ void displayBanner() {
     cout << "*****************************************\n\n";
 }
 
-void displayLogin(char name[], int size, int& ID) {
+void displayLogin(char name[], int size1, char ID[], int size2) {
     cout << "Name: ";
-    cin.getline(name, 20);
+    cin.getline(name, size1);
     cout << "Employee ID: ";
-    cin >> ID;
+    cin.getline(ID, size2);
 }
 
 void displayMenu(char name[]) {
