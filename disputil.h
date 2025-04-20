@@ -4,7 +4,7 @@
 #include "employee.h"
 
 void displayBanner();
-void displayLogin(char[], int, int&);
+void displayLogin(char[], int, char[], int);
 void displayMenu(char[]);
 int getDaysOff(const Employee);
 Shift selectDayOff(Employee*, int&);
