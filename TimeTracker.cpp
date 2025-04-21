@@ -13,31 +13,37 @@ int main()
     Employee employee;
     char name[20];
     char ID[5];
-    int choice;
+    int choice = -1;
     displayBanner();
 
-    do {
-        displayLogin(name, 20, ID, 5);
-        loginEmployee(&employee, name, ID);
-    } while (!employee.logon);
+    displayLogin(name, 20, ID, 5);
+    if (!loginEmployee(&employee, name, ID))
+        choice = 5; // Exit
     
-        displayMenu(name);
-    
+    while (choice != 5) {
+        displayMenu(employee);
+
         cout << "Enter your choice (1-6): ";
         cin >> choice;
 
-        switch(choice)
+        switch (choice)
         {
-         case 1:
+        case 1:
             clockIn(&employee);
             break;
         case 2:
             clockOut(&employee);
             break;
-        case 5:
+        case 3:
+            break;
+        case 4:
             takeTimeOff(&employee, getDaysOff(employee));
             break;
+        case 5: // Exit
+            employee.logon = false;
+            break;
         }
+    }
    
     return 0;
 }

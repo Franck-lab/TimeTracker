@@ -16,6 +16,6 @@ void clockIn(Employee*);
 void clockOut(Employee*);
 double calcWorkedHour(Employee*);
 void takeTimeOff(Employee*, int);
-void loginEmployee(Employee*, char*, char*);
+bool loginEmployee(Employee*, char*, char*);
 
 #endif

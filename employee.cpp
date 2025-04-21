@@ -22,7 +22,7 @@ void clockOut(Employee* e) {
 	cout << "Punch Out Successful " << e->table.timeOut << endl;
 }
 
-void loginEmployee(Employee* e, char* name, char* ID) {
+bool loginEmployee(Employee* e, char* name, char* ID) {
 	ifstream employeeFile;
 	char filename[310] = "";
 
@@ -32,14 +32,16 @@ void loginEmployee(Employee* e, char* name, char* ID) {
 	strcat(filename, ".dat");
 
 	employeeFile.open(filename, ios::in | ios::binary);
-	if (!employeeFile)
+	if (!employeeFile) {
 		cout << "\nInvalid Name or ID. Login Unsuccessful.\n";
-	else {
+		return false;
+	}
 		employeeFile.read(reinterpret_cast<char*>(e), sizeof(Employee));
 		e->logon = true;
 		employeeFile.close();
 		cout << "\nLogin Successful\n";
-	}
+
+	return true;
 }
 
 

@@ -5,7 +5,7 @@
 
 void displayBanner();
 void displayLogin(char[], int, char[], int);
-void displayMenu(char[]);
+void displayMenu(const Employee);
 int getDaysOff(const Employee);
 Shift selectDayOff(Employee*, int&);
 void dayToStr(Shift);

@@ -18,15 +18,14 @@ void displayLogin(char name[], int size1, char ID[], int size2) {
     cin.getline(ID, size2);
 }
 
-void displayMenu(char name[]) {
+void displayMenu(Employee e) {
     cout << "\n------------ Home -------------\n\n";
-    cout << name << "\tClock in: Yes\t" << "Worked Hours: " << 8.25 << endl; // Change here with time stamp and calculated hours
+    cout << e.fullName << "\tClock in: Yes\t" << "Worked Hours: " << 8.25 << endl; // Change here with time stamp and calculated hours
     cout << "\n1. Punch In\n";
     cout << "2. Punch Out\n";
     cout << "3. Timetable\n";
-    cout << "4. Open Shift\n";
-    cout << "5. Take Time Off\n";
-    cout << "6. Exit\n\n";
+    cout << "4. Take Time Off\n";
+    cout << "5. Exit\n\n";
 }
 
 int getDaysOff(const Employee e) {
