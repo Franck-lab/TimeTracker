@@ -37,8 +37,9 @@ int main()
     while (choice != 5) {
         displayMenu(*employee);
 
-        cout << "Enter your choice (1-6): ";
+        cout << "Enter your choice (1-5): ";
         cin >> choice;
+        cin.ignore();
 
        switch (choice)
         {
@@ -47,6 +48,8 @@ int main()
                 cout << "\nPunch Successful\tClock In: " << ctime(employee->getPunchIn()) << endl;
             else
                 cout << "\nClock In: " << ctime(employee->getPunchIn()) << endl;
+            cout << "Tap ENTER to continue...";
+            cin.get();
             break;
         case 2:
             //clockOut(&employee);
