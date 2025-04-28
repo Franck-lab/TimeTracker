@@ -14,14 +14,25 @@ int main()
     char name[20];
     char ID[5];
     int choice = -1;
+    char reply;
     displayBanner();
 
-    displayLogin(name, 20, ID, 5);
-    employee = new Employee(ID, name);
-    if (employee->login(ID, name))
-        cout << "Login Sucessfull...\n";
-    else
-        cout << "Login Unsuccessful...\n";
+    do {
+        displayLogin(name, 20, ID, 5);
+        employee = new Employee(ID, name);
+        if (employee->login(ID, name)) {
+            cout << "Login Sucessful...\n";
+            break;
+        }
+        else {
+            cout << "Login Unsuccessful...\n";
+            cout << "Do you want to try again or exit(y/n)? (y - try again, n - exit): ";
+            cin >> reply;
+            cin.ignore();
+            cout << endl;
+        }
+    } while (reply == 'y');
+        
     
     //while (choice != 5) {
     //    displayMenu(employee);
