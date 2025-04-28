@@ -9,8 +9,8 @@ A executable is provided, ./TimeTracker/x64/Debug/TimeTracker.exe
 
 ## Test  Employee
 Dummy employee for testing purposes is provided.
-- Employee's filename: <MathBaty.dat>
-- Name: <Math Baty>
+- Employee's filename: "MathBaty.dat"
+- Name: Math Baty
 - ID: 5463
 Use the above information to get the main menu to test and improve.
 
