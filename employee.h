@@ -19,7 +19,7 @@ public:
 	time_t* getPunchIn();
 	time_t* getPunchOut();
 	TimeTable* getTable();
-	//bool logout();
+	bool logout();
 	bool clockIn();
 	bool clockOut();
 };

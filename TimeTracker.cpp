@@ -68,7 +68,7 @@ int main()
            //takeTimeOff(&employee, getDaysOff(employee));
             break;
         case 5: // Exit
-            //employee.logon = false;
+            employee->logout();
             break;
         }
     }
