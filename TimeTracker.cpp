@@ -34,30 +34,30 @@ int main()
     } while (reply == 'y');
         
     
-    //while (choice != 5) {
-    //    displayMenu(employee);
+    while (choice != 5) {
+        displayMenu(*employee);
 
-    //    cout << "Enter your choice (1-6): ";
-    //    cin >> choice;
+        cout << "Enter your choice (1-6): ";
+        cin >> choice;
 
-    //    switch (choice)
-    //    {
-    //    case 1:
-    //        clockIn(&employee);
-    //        break;
-    //    case 2:
-    //        clockOut(&employee);
-    //        break;
-    //    case 3:
-    //        break;
-    //    case 4:
-    //        takeTimeOff(&employee, getDaysOff(employee));
-    //        break;
-    //    case 5: // Exit
-    //        employee.logon = false;
-    //        break;
-    //    }
-    //}
+       switch (choice)
+        {
+        case 1:
+            //clockIn(&employee);
+            break;
+        case 2:
+            //clockOut(&employee);
+            break;
+        case 3:
+            break;
+        case 4:
+           //takeTimeOff(&employee, getDaysOff(employee));
+            break;
+        case 5: // Exit
+            //employee.logon = false;
+            break;
+        }
+    }
    
     return 0;
 }

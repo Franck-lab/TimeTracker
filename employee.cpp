@@ -37,6 +37,10 @@ bool Employee::login(char * id, char* name) {
 	return true;
 }
 
+char* Employee::getFullname() {
+	return fullname;
+}
+
 //void clockIn(Employee *e) {
 //
 //	const time_t rawtime = time(NULL);

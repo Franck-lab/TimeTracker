@@ -28,6 +28,7 @@ private:
 public:
 	Employee(char*, char*);
 	bool login(char*, char*);
+	char* getFullname();
 	//bool logout();
 	//bool clockIn();
 	//bool clockOut();
