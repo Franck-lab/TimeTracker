@@ -60,6 +60,9 @@ int main()
             cin.get();
             break;
         case 3:
+            displayTimeTable(*employee);
+            cout << "Tap ENTER to continue...";
+            cin.get();
             break;
         case 4:
            //takeTimeOff(&employee, getDaysOff(employee));
