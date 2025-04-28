@@ -43,7 +43,10 @@ int main()
        switch (choice)
         {
         case 1:
-            //clockIn(&employee);
+            if (employee->clockIn())
+                cout << "\nPunch Successful\tClock In: " << ctime(employee->getPunchIn()) << endl;
+            else
+                cout << "\nClock In: " << ctime(employee->getPunchIn()) << endl;
             break;
         case 2:
             //clockOut(&employee);

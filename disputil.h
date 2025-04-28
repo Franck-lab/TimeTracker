@@ -6,9 +6,9 @@
 void displayBanner();
 void displayLogin(char[], int, char[], int);
 void displayMenu(Employee);
-int getDaysOff(const Employee);
-Shift selectDayOff(Employee*, int&);
-void dayToStr(Shift);
+//int getDaysOff(const Employee);
+//Shift selectDayOff(Employee*, int&);
+//void dayToStr(Shift);
 
 #endif // !DISPUTIL_H
 

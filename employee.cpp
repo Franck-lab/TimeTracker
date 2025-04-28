@@ -41,6 +41,21 @@ char* Employee::getFullname() {
 	return fullname;
 }
 
+time_t* Employee::getPunchIn() {
+	time_t *in = new time_t;
+	*in = punchIn;
+	return in;
+}
+
+bool Employee::clockIn() {
+	if (!punch) {
+		punchIn = time(NULL);
+		punch = true;
+		return true;
+	}
+	return false;
+}
+
 //void clockIn(Employee *e) {
 //
 //	const time_t rawtime = time(NULL);

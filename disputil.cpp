@@ -64,28 +64,28 @@ void displayMenu(Employee e) {
 //    return ON;
 //}
 
-void dayToStr(Shift day) {
-    switch (day) {
-    case MONDAY:
-        cout << "Monday: ";
-        break;
-    case TUESDAY:
-         cout << "Tuesday: ";
-         break;
-    case WEDNESDAY:
-         cout << "Wednesday: ";
-         break;
-    case THURSDAY:
-         cout << "Thursday: ";
-         break;
-    case FRIDAY:
-         cout << "Friday: ";         
-         break;
-    case SATURDAY:
-        cout << "Saturday: ";
-        break;
-    case SUNDAY:
-        cout << "Sunday: ";
-        break;
-    }
-}
+//void dayToStr(Shift day) {
+//    switch (day) {
+//    case MONDAY:
+//        cout << "Monday: ";
+//        break;
+//    case TUESDAY:
+//         cout << "Tuesday: ";
+//         break;
+//    case WEDNESDAY:
+//         cout << "Wednesday: ";
+//         break;
+//    case THURSDAY:
+//         cout << "Thursday: ";
+//         break;
+//    case FRIDAY:
+//         cout << "Friday: ";         
+//         break;
+//    case SATURDAY:
+//        cout << "Saturday: ";
+//        break;
+//    case SUNDAY:
+//        cout << "Sunday: ";
+//        break;
+//    }
+//}
