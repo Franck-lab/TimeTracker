@@ -16,9 +16,10 @@ public:
 	bool login(char*, char*);
 	char* getFullname();
 	time_t* getPunchIn();
+	time_t* getPunchOut();
 	//bool logout();
 	bool clockIn();
-	//bool clockOut();
+	bool clockOut();
 };
 
 #endif

@@ -45,14 +45,19 @@ int main()
         {
         case 1:
             if (employee->clockIn())
-                cout << "\nPunch Successful\tClock In: " << ctime(employee->getPunchIn()) << endl;
+                cout << "\nPunch in successful\tClock In: " << ctime(employee->getPunchIn()) << endl;
             else
                 cout << "\nClock In: " << ctime(employee->getPunchIn()) << endl;
             cout << "Tap ENTER to continue...";
             cin.get();
             break;
         case 2:
-            //clockOut(&employee);
+            if (employee->clockOut())
+                cout << "\nPunch out successful\tClock Out: " << ctime(employee->getPunchOut()) << endl;
+            else
+                cout << "\nClock Out: " << ctime(employee->getPunchOut()) << endl;
+            cout << "Tap ENTER to continue...";
+            cin.get();
             break;
         case 3:
             break;

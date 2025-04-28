@@ -47,10 +47,24 @@ time_t* Employee::getPunchIn() {
 	return in;
 }
 
+time_t* Employee::getPunchOut() {
+	time_t* out = new time_t;
+	*out = punchOut;
+	return out;
+}
+
 bool Employee::clockIn() {
 	if (!punch) {
 		punchIn = time(NULL);
 		punch = true;
+		return true;
+	}
+	return false;
+}
+bool Employee::clockOut() {
+	if (punch) {
+		punchOut = time(NULL);
+		punch = false;
 		return true;
 	}
 	return false;
