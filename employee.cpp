@@ -41,6 +41,7 @@ bool Employee::login(char * id, char* name) {
 
 bool Employee::logout() {
 	logon = false;
+	return true;
 }
 
 char* Employee::getFullname() {
